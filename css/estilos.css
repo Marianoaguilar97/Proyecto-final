@@ -12,11 +12,75 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  background-color: #FEFBE7;
+  margin: 2px; }
+
+/*header */
+.logo--container {
+  max-width: 200px; }
+
+.nav {
+  height: 80px; }
+
+.nav--container {
+  display: flex;
+  height: 100%;
+  width: 98%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px; }
+
+.nav--label, .nav--input {
+  display: none; }
+
+.nav--menu {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3em; }
+
+.nav--item {
+  color: black;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+
+.nav--item::after {
+  content: "";
+  display: block;
+  background: black;
+  width: 90%;
+  margin-top: 3px;
+  height: 3px;
+  clip-path: var(--clippy);
+  transition: clip-path .3s; }
+
+.nav--item:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+
+/*main general*/
+.seccion--titulo {
+  background-color: #A0BCC2;
+  text-align: center;
+  font-size: 30px; }
+
+/*main index*/
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 5px;
+  justify-content: center;
+  margin: 10%; }
+
 .seccionEncuadrado--grande {
   width: 600px;
-  background-color: #f0cfa3;
+  background-color: #A0BCC2;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
+  font-weight: 600;
   height: 400px;
   margin: 10px;
   text-align: center;
@@ -24,9 +88,10 @@ table {
 
 .seccionEncuadrado--mediano {
   width: 270px;
-  background-color: #f0cfa3;
+  background-color: #A0BCC2;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
+  font-weight: 600;
   height: 400px;
   margin: 10px;
   text-align: center;
@@ -34,78 +99,32 @@ table {
 
 .seccionEncuadrado--chico {
   width: 120px;
-  background-color: #f0cfa3;
+  background-color: #A0BCC2;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
+  font-weight: 600;
   height: 400px;
   margin: 10px;
   text-align: center;
   border-radius: 15px; }
 
-body {
-  background-color: burlywood; }
-
-/*header */
-header {
-  height: 160px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  header ul a:hover {
-    background-color: azure; }
-
-.logo1 {
-  height: 300px;
-  width: 300px; }
-
-.logo2 {
-  display: none;
-  height: 300px;
-  width: 300px; }
-
-.navegacion ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .navegacion ul li {
-    display: inline-block; }
-    .navegacion ul li a {
-      display: block;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      color: black;
-      background-color: blanchedalmond;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 14px; }
-
-.redes__sociales {
-  padding: 0; }
-  .redes__sociales img {
-    height: 50px;
-    width: 50px; }
-
-/*main general*/
-.seccion__titulo {
-  background-color: #cc851c;
-  text-align: center;
-  font-size: 30px; }
-
 .seccionEncuadrado--mediano a {
-  background-color: #c0b659;
-  color: #442c0e;
+  background-color: #DAE5D0;
+  color: black;
   padding: 15px 20px;
   display: block;
   text-align: center;
   margin: 10px 40px;
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: 600; }
 
-.seccion__encuadrado:hover {
-  background-color: antiquewhite;
+.seccionEncuadrado--mediano:hover {
+  background-color: #63a8b8;
   cursor: pointer;
   transform: scale(1.03);
   transition: all 1s ease; }
 
-.seccion__encuadradoImagen {
+.seccion--encuadradoImagen {
   height: 170px;
   margin-bottom: 15px;
   border-radius: 15px 15px 0 0; }
@@ -126,136 +145,223 @@ header {
   background-image: url(../imagenes/berlin.png);
   background-size: cover; }
 
-.seccion__encuadrado img {
-  width: 100%; }
-
-/*main index*/
-#productos {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 5px;
-  row-gap: 5px;
-  justify-content: center; }
-
 /*main nosotros*/
-.seccion__quienesSomos {
-  background-image: url(../imagenes/banner.jpg);
-  background-size: cover;
-  color: antiquewhite;
-  border: 1px black solid;
+.seccion--quienesSomos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 18%;
+  flex-direction: column; }
+
+.quienes--somos {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #63a8b8; }
+
+.texto--quienesSomos {
+  padding: 5px;
   font-family: 'Montserrat', sans-serif;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.3;
-  text-align: center; }
+  font-weight: bold; }
 
 /*main fechas y precios*/
-table,
-td,
-th {
-  border: 2px solid #1b1b22;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; }
-
-table {
-  width: 50%; }
-
-/*footer*/
-footer {
+.tabla--precios {
   display: flex;
-  justify-content: space-between;
-  padding: 4rem 0;
-  text-align: center;
-  margin-top: 6rem; }
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 5%; }
 
-/*footer medios de pago*/
-.footer__mediosDePago {
-  width: 50%;
-  padding: 16px 20px;
-  margin-left: auto;
-  margin-right: auto;
+.tarjeta--precio {
+  flex: 1;
+  max-width: 360px;
+  background-color: #A0BCC2;
+  margin: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  color: #2d2d2d;
+  transition: .3s linear; }
+
+.encabezado--tarjeta {
+  background-color: #63a8b8;
+  display: inline-block;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0 0 20px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .4s linear; }
+
+.tarjeta--precio:hover .encabezado--tarjeta {
+  box-shadow: 0 0 0 26em #63a8b8; }
+
+.precio {
+  font-size: 70px;
+  color: #63a8b8;
+  margin: 40px 0;
+  transition: .2s linear; }
+
+.precio sup, .precio span {
+  font-size: 22px;
+  font-weight: 700; }
+
+.tarjeta--precio:hover, .tarjeta--precio:hover .precio {
+  color: #fff; }
+
+.tarjeta--precio li {
+  font-size: 16px;
+  padding: 10px 0;
+  text-transform: uppercase; }
+
+.boton-contactanos {
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  border: 2px solid #63a8b8;
+  color: #fefbe7;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: .3s linear; }
+
+.boton-contactanos:hover {
+  background-color: #63a8b8;
+  color: #fff; }
+
+/*contactanos*/
+.texto--contacto {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   text-align: center; }
 
-footer img {
-  height: 100px;
-  width: 100px; }
+.contenedor--mediosContacto {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 90px;
+  justify-content: center; }
+  .contenedor--mediosContacto p {
+    margin-top: 0;
+    margin-bottom: 1rem; }
+  .contenedor--mediosContacto strong {
+    font-weight: bolder; }
 
-/*footer formulario*/
-.footer__formulario {
-  width: 50%;
-  padding: 16px 20px;
-  background-color: rgba(168, 121, 59, 0.808);
-  border-radius: 4px;
+.formulario {
+  width: 450px;
+  margin: auto;
+  margin-bottom: 12%;
+  padding: 10px 20px;
+  background-color: #A0BCC2;
+  border-radius: 7px;
   font-family: 'calibri'; }
-  .footer__formulario h4 {
-    font-size: 22px;
+  .formulario h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
     margin-bottom: 20px; }
-  .footer__formulario textarea {
+  .formulario .controles, .formulario textarea {
     width: 100%;
-    background: #c4a244;
+    margin-bottom: 20px;
+    padding: 7px;
+    background: #FEFBE7;
     border-radius: 4px;
     border: 1px solid #000000;
     font-family: 'calibri';
     font-size: 18px;
-    color: white; }
-
-.controles {
-  width: 100%;
-  background: #c4a244;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  border: 1px solid #000000;
-  font-family: 'calibri';
-  font-size: 18px;
-  color: white; }
+    color: black; }
+  .formulario textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%; }
 
 .boton {
   width: 100%;
-  background: #c4a244;
-  border: none;
-  padding: 12px;
-  color: black;
-  margin: 16px 0;
-  font-size: 16px; }
+  background: #FEFBE7;
+  padding: 19px;
+  margin-bottom: 10px;
+  color: black; }
+
+.boton:hover {
+  cursor: pointer;
+  background-color: #63a8b8; }
 
 form {
   height: 100%;
   width: 100%; }
 
+/*footer*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #A0BCC2; }
+
+.footer--nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #A0BCC2; }
+
+/*footer medios de pago*/
+.footer--mediosDePago {
+  padding: 0; }
+
+footer img {
+  height: 50px;
+  width: 50px; }
+
+.redes--sociales {
+  padding: 0; }
+  .redes--sociales img {
+    height: 40px;
+    width: 40px; }
+
 /*media querys*/
-@media (max-width: 788px) {
-  .logo1 {
-    display: none; }
-  .logo2 {
+@media (max-width: 700px) {
+  .nav--label {
     display: block;
-    width: 200px;
-    height: 200px; }
-  .navegacion {
-    width: 100%; }
-    .navegacion ul li {
-      display: block;
-      padding: 1px; }
-      .navegacion ul li a {
-        padding: 0.5rem 0; }
-  .redes__sociales {
-    padding: 0; }
-  /*footer*/
-  footer {
+    cursor: pointer; }
+  .nav--menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: #A0BCC2;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0 0;
-    margin-top: 1rem; }
-  /*footer medios de pago*/
-  .footer__mediosDePago {
-    margin-left: auto;
-    margin-right: auto; }
-  /*footer formulario*/
-  .footer__formulario {
-    margin-left: auto;
-    margin-right: auto; }
-    .footer__formulario textarea {
-      width: 90%; }
-  .controles {
-    width: 90%; } }
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out; }
+  .nav--input:checked + .nav--menu {
+    clip-path: circle(100% at center); } }
+
+@media (max-width: 720px) {
+  /*formulario*/
+  .formulario {
+    width: 100%; } }
+
+@media (max-width: 1120px) {
+  .tarjeta--precio {
+    flex: 50%; }
+  .footer {
+    position: static; } }

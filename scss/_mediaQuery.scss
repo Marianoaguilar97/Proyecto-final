@@ -1,63 +1,52 @@
  /*media querys*/
- @media (max-width: 788px) {
+ 
+ @media (max-width: 700px){
+    .nav--label{
+        display: block;
+        cursor: pointer;
+    }
 
-    .logo1 {
-        display: none;
-    }
-    
-    .logo2 {	
-        display: block ;
-        width: 200px;
-        height: 200px;
-        
-    }
-    
-    .navegacion {
+    .nav--menu{
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: #A0BCC2;
         width: 100%;
-        ul li {
-            display: block;
-            padding: 1px;
-            a {
-                padding: 0.5rem 0;
-            }
-        }
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
     }
-    
-    .redes__sociales {
-        padding: 0;
+
+    .nav--input:checked + .nav--menu {
+        clip-path: circle(100% at center);
     }
+
+
+}
+ 
+ 
+ @media (max-width: 720px) {
+
     
-        /*footer*/
-    
-        footer {
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 0 0;
-             margin-top: 1rem ;
-        }
-       
-        /*footer medios de pago*/
-       
-        .footer__mediosDePago {
-            margin-left: auto;
-             margin-right: auto;
-        }
-       
-        /*footer formulario*/
-       
-        .footer__formulario {
-            margin-left: auto;
-             margin-right: auto;
+        /*formulario*/
+       .formulario {
+        width: 100%;
+       }
         
-       
-             textarea {
-            width: 90%;
-            }
+    }
+
+    @media (max-width: 1120px) {
+
+        .tarjeta--precio {
+            flex: 50%;
         }
         
-        .controles {
-            width: 90%;
-    
+        .footer {
+             position: static;
         }
-    
     }
+    

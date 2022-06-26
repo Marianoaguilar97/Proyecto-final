@@ -18,29 +18,33 @@
 <body>
 
     <header>
-        <!--Logo -->
-        <a href="index.html"><img class="logo1" src="imagenes/logo1.png" alt="Logo"></a>
-        <a href="index.html"><img class="logo2" src="imagenes/logo2.png" alt="Logo"></a>
-        <nav class="navegacion">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/fechas-y-precios.html">Fechas Y Precios</a></li>
-                <li><a href="pages/nosotros.html">Nosotros</a></li>
-            </ul>
-        </nav>
-        <div class="redes__sociales">
-            <!--Redes Sociales -->
-            <a href="https://www.instagram.com/"><img src="./imagenes/rrss/instagram.png" alt="Logo Instagram"> </a>
-            <a href="https://www.facebook.com/"><img src="./imagenes/rrss/facebook.png" alt="Logo Facebook"> </a>
-            <a href="https://www.twitter.com/"><img src="./imagenes/rrss/twitter.png" alt="Logo Twitter"> </a>
+        <nav class="nav">
+        <div class="nav--container">
+            <div class="logo--container">    
+                <a href="../index.html"><img class="logo1" src="../imagenes/logo.png" alt="Logo"></a>
+            </div>
+            <label for="menu" class="nav--label">
+                <img src="assets/menu.svg" alt="Menu" class="nav--img">
+            </label>
+            
+            <input type="checkbox" id="menu" class="nav--input">
+            
+            <div class="nav--menu"> 
+                <a href="index.html" class="nav--item">Viajes</a>
+                <a href="pages/fechas-y-precios.html" class="nav--item">Fechas y Precios</a>
+                <a href="pages/nosotros.html" class="nav--item">Nosotros</a>
+                <a href="pages/contacto.html" class="nav--item">Contacto</a>
+            </div>
+
         </div>
+    </nav>
     </header>
     <main>
-        <h1 class="seccion__titulo">Buenos Viajes</h1>
-        <section id="productos">
+        <h1 class="seccion--titulo">Viajes</h1>
+        <section class="productos">
             <!--Productos -->
             <div class="seccionEncuadrado--mediano ">
-                <div class="seccion__encuadradoImagen img-1" title="Caribe"></div>
+                <div class="seccion--encuadradoImagen img-1" title="Caribe"></div>
                 <h2>Caribe</h2>
                 <p>Las más impresionantes playas te esperan en el Caribe. En Buenos Viajes te ofrecemos los mejores paquetes
                     al Caribe para que disfrutes de estos maravillosos destinos sin gastar de más. Punta Cana te ofrece
@@ -49,7 +53,7 @@
                 <a href="pages/fechas-y-precios.html">Ver fechas y precios</a>
             </div>
             <div class="seccionEncuadrado--mediano">
-                <div class="seccion__encuadradoImagen img-2" title="Roma"></div>
+                <div class="seccion--encuadradoImagen img-2" title="Roma"></div>
                 <h2>Roma</h2>
                 <p>¿Qué te parecería conocer Italia a un bajo precio y pagando el vuelo y los hoteles? Los paquetes a
                     Roma te permitirán organizar tu viaje de manera rápida, en un combo perfecto para tener la mejor de
@@ -58,17 +62,16 @@
                 <a href="pages/fechas-y-precios.html">Ver fechas y precios</a>
             </div>
             <div class="seccionEncuadrado--mediano">
-                <div class="seccion__encuadradoImagen img-3" title="Paris"></div>
+                <div class="seccion--encuadradoImagen img-3" title="Paris"></div>
                 <h2>Paris</h2>
-                <p>París es considerada una de las ciudades más bellas de Europa. Conocida como la capital del amor y la
-                    ciudad luz, recibe a todos los viajeros con su belleza única. Si compras alguno de los paquetes a
-                    París que Buenos Viajes tiene para ti no solo tendrás la posibilidad de adquirir tu vuelo si no que
-                    tambien te vas a divertir.
+                <p>París es considerada una de las ciudades más bellas de Europa. que mejor aúnan el romanticismo, 
+                    el arte, la cultura y los monumentos. Descubra todo lo que puede ofrecer París, la Ciudad del Amor y de la Luz.
+                    Recibe a todos los viajeros con su belleza única debido a su unica.
                 </p>
                 <a href="pages/fechas-y-precios.html">Ver fechas y precios</a>
             </div>
             <div class="seccionEncuadrado--mediano">
-                <div class="seccion__encuadradoImagen img-4" title="Alemania"></div>
+                <div class="seccion--encuadradoImagen img-4" title="Alemania"></div>
                 <h2>Berlín</h2>
                 <p>Los paquetes a Berlín que buscás para tus viajes, te esperan en Buenos Viajes. No dejés pasar un
                     minuto más, comprá ya mismo tu paquete turístico BARATO y pasá unos días fantásticos en Berlín. Con
@@ -80,26 +83,22 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__mediosDePago">
-            <h2>Medios De Pago</h2>
+        <div class="footer--mediosDePago">
             <!--Imagenes de medios de pago-->
             <img src="./imagenes/pagos/mastercard.png" alt="Master Card">
             <img src="./imagenes/pagos/americanexpress.png" alt="American express">
             <img src="./imagenes/pagos/visa.png" alt="Visa">
             <img src="./imagenes/pagos/maestro.png" alt="Maestro">
         </div>
-        <div class="footer__formulario">
-            <form action="https://formspree.io/f/mknyqqvj" method="POST">
-                <h2>Contactanos</h2>
-                <input class="controles" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" required>
-                <input class="controles" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido"
-                    required>
-                <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su Correo"
-                    required>
-                <textarea name="Comentarios" placeholder="Comentarios" id="Comentarios"></textarea>
-                <input class="boton" type="submit" value="Enviar">
-            </form>
+
+        <!--Imagenes redes socials-->
+        <div class="redes--sociales">
+            <a href="https://www.instagram.com/"><img src="../imagenes/rrss/instagram.png" alt="Logo Instagram"> </a>
+            <a href="https://www.facebook.com/"><img src="../imagenes/rrss/facebook.png" alt="Logo Facebook"> </a>
+            <a href="https://www.twitter.com/"><img src="../imagenes/rrss/twitter.png" alt="Logo Twitter"> </a>
+
         </div>
+
     </footer>
 </body>
 
